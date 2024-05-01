@@ -10,7 +10,7 @@ public class SearchApp extends Application
 {
     public static SearchApp instance;
     private static GameSearchApplication search;
-    private static Stage stage;
+    public static Stage stage;
 
     public SearchApp() 
     {

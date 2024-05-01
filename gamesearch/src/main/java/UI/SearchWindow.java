@@ -29,6 +29,12 @@ public class SearchWindow extends WINDOW implements Initializable {
 
     static Game search;
 
+    @Override
+    public void open(String path) throws RuntimeException {
+        super.open(path);
+        SearchApp.stage.setResizable(true);
+    }
+
     public SearchWindow()
     {
         open("SearchWindow.fxml");

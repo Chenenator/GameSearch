@@ -23,11 +23,17 @@ public class LoginWindow extends WINDOW implements Initializable {
     TextField steamIDInput;
 
     @FXML
-    ImageView image;
+    ImageView imageView;
 
     public LoginWindow() 
     {
         open("LoginWindow.fxml");
+    }
+
+    @Override
+    public void open(String path) throws RuntimeException {
+        super.open(path);
+        SearchApp.stage.setResizable(false);
     }
 
     @FXML
@@ -60,6 +66,7 @@ public class LoginWindow extends WINDOW implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.image.setImage(helpImage);
+        this.imageView.setImage(helpImage);
+        this.imageView.setPreserveRatio(true);
     }
 }
